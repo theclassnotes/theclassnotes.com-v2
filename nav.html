@@ -1,0 +1,54 @@
+<html>
+<head>
+	<title>The Class Notes</title>
+	<!-- Navigation -->
+	<script language="Javascript">
+	<!--
+	var aSections = Array("","concertstour","recordings","members","alumni","guestbook","news","webstore","picsmedia","auditions","contactus");		
+	var preloadArray;
+	
+	function preloadImages() {
+		if (parseInt(navigator.appVersion) > 3) {
+			preloadArray = new Array();
+			for (var i=0; i<aSections.length; i++) {
+				preloadArray[i] = new Image;
+				preloadArray[i].src = "nav/" + aSections[i] + "_hov.gif";
+			}
+		}
+	}
+
+	function swap(imgIndex,on) {
+		if (parseInt(navigator.appVersion) > 3) {
+			document.images[aSections[imgIndex]].src = ((on == 1) ? preloadArray[imgIndex].src : ("nav/" + aSections[imgIndex] + "_nrm.gif"));
+		}
+	}
+
+	ns4 = (document.layers)? true:false;
+	ie4 = (document.all)? true:false;
+	function setAttrib(objName,attribName,value) {
+		if (ns4) {
+			attribName = (attribName=="left") ? "pageX" : attribName;
+			eval("document['"+objName+"']."+attribName+"=value");
+		} else if (ie4) {
+			eval("document.all['"+objName+"'].style."+attribName+"='"+value+"'");
+		} else {		// Netscape 6
+			eval("document.getElementById('"+objName+"').style."+attribName+"=value");				
+		}
+	}	
+	
+	function clr(imgIndex) {
+		//document.forms[0].blank.focus();
+		//setAttrib("maincell","backgroundImage","url(nav/bk_" + imgIndex + ".jpg)");
+		document.body.focus();
+	}
+	//-->
+	</script>
+</head>
+
+<body bgcolor=#000000 text=#ffffff link=#cce5ff alink=#ffffff marginheight=0 marginwidth=0 leftmargin=0 topmargin=0 rightmargin=0>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="282" height="446">
+  <param name="movie" value="nav.swf">
+  <param name="quality" value="high">
+  <embed src="nav.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="282" height="446"></embed></object>
+</body>
+</html>

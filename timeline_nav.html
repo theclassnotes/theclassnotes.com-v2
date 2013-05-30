@@ -1,0 +1,117 @@
+<html>
+<head>
+	<title>The Class Notes</title>
+	<!-- Timeline Navigation -->
+	<style type="text/css">
+		td {font-family:Arial; font-size:.6em;}
+		a {text-decoration:none;}
+	</style>
+	<script language="Javascript">
+		var oldyr=-1;
+		
+		var ns4 = (document.layers)? true:false;
+		var ie4 = (document.all)? true:false;
+		function setAttrib(objName,attribName,value) {
+			if (ns4) {
+				attribName = (attribName=="left") ? "pageX" : attribName;
+				eval("document['"+objName+"']."+attribName+"=value");
+			} else if (ie4) {
+				eval("document.all['"+objName+"'].style."+attribName+"='"+value+"'");
+			} else {		// Netscape 6
+				eval("document.getElementById('"+objName+"').style."+attribName+"=value");				
+			}
+		}
+
+		function hover(yr) {
+			startScroll(yr)	
+			if (!ns4) {	
+				if (oldyr!=-1) {
+					for (i=(oldyr-2); i<(oldyr+3); i++) {
+						if (i<=thisyear && i>=1983) {
+							eval("setAttrib('yr" + i + "','" + "fontSize" + "','" + "1em" + "')");
+							eval("setAttrib('yr" + i + "','" + "fontWeight" + "','" + "normal" + "')");
+							eval("setAttrib('yr" + i + "','" + "color" + "','" + "#666666" + "')");
+						}
+					}
+				}		
+				eval("setAttrib('yr" + yr + "','" + "fontSize" + "','" + "1.2em" + "')");
+				eval("setAttrib('yr" + yr + "','" + "fontWeight" + "','" + "bold" + "')");
+				eval("setAttrib('yr" + yr + "','" + "color" + "','" + "#ffffff" + "')");
+				for (i=(yr-2); i<(yr+3); i++) {
+					if ((i!=yr) && (i<=thisyear && i>=1983)) {
+						eval("setAttrib('yr" + i + "','" + "fontSize" + "','" + "1em" + "')");
+						eval("setAttrib('yr" + i + "','" + "fontWeight" + "','" + "normal" + "')");
+						eval("setAttrib('yr" + i + "','" + "color" + "','" + "#cccccc" + "')");
+						if (i==(yr-2) || i==(yr+2)) eval("setAttrib('yr" + i + "','" + "color" + "','" + "#999999" + "')");
+					}
+				}
+			}
+			oldyr = yr;
+		}
+		
+		var thisyear=2003;
+		var todaywidth=270;
+		var yearwidth=480;
+		var numScrollSteps=6;
+		var currScrollStep=0;
+		var scrollDistance=1;
+		var scrollDestination=0;
+		var scrArr=Array(.40,.28,.15,.10,.05,.02);
+		function doScroll() {
+			if (ie4) {
+				parent.timelinePhotos.document.body.scrollLeft+=parseInt(scrollDistance*scrArr[currScrollStep],10);
+				if (currScrollStep==numScrollSteps-1) parent.timelinePhotos.document.body.scrollLeft=scrollDestination;
+			} else {
+				parent.timelinePhotos.scrollTo(parent.timelinePhotos.pageXOffset+parseInt(scrollDistance*scrArr[currScrollStep],10),0);
+				if (currScrollStep==numScrollSteps-1) parent.timelinePhotos.scrollTo(scrollDestination,0);
+			}
+			currScrollStep++;
+			if (currScrollStep<numScrollSteps) {
+				theID=setTimeout("doScroll()",50);
+			} else {
+				currScrollStep=0;
+			}
+		}
+		function startScroll(destYr) {
+			dest = (destYr!=thisyear) ? todaywidth + ((thisyear-destYr)*yearwidth) - 7  :  0;
+			currScrollStep=0;
+			if (ie4) {
+				q=parent.timelinePhotos.document.body.scrollLeft;
+			} else {
+				q=parent.timelinePhotos.pageXOffset;
+			}
+			scrollDistance=dest-q;
+			scrollDestination=dest;
+			doScroll();
+		}
+	</script>
+</head>
+
+<!-- parent.main.location.href=parent.contentPage; -->
+<body bgcolor=#000000 text=#666666 link=#666666 alink=#666666 vlink=#666666 marginheight=0 marginwidth=9 leftmargin=9 topmargin=0 rightmargin=9 onload="hover(thisyear);">
+<table border=0 cellpadding=0 cellspacing=0 width=100% height=15><tr valign=bottom align=center>
+<td><a href="#" id="yr2003" onmouseover="hover(2003);" onclick="return false;">2003</a></td>
+<td><a href="#" id="yr2002" onmouseover="hover(2002);" onclick="return false;">2002</a></td>
+<td><a href="#" id="yr2001" onmouseover="hover(2001);" onclick="return false;">2001</a></td>
+<td><a href="#" id="yr2000" onmouseover="hover(2000);" onclick="return false;">2000</a></td>
+<td><a href="#" id="yr1999" onmouseover="hover(1999);" onclick="return false;">1999</a></td>
+<td><a href="#" id="yr1998" onmouseover="hover(1998);" onclick="return false;">1998</a></td>
+<td><a href="#" id="yr1997" onmouseover="hover(1997);" onclick="return false;">1997</a></td>
+<td><a href="#" id="yr1996" onmouseover="hover(1996);" onclick="return false;">1996</a></td>
+<td><a href="#" id="yr1995" onmouseover="hover(1995);" onclick="return false;">1995</a></td>
+<td><a href="#" id="yr1994" onmouseover="hover(1994);" onclick="return false;">1994</a></td>
+<td><a href="#" id="yr1993" onmouseover="hover(1993);" onclick="return false;">1993</a></td>
+<td><a href="#" id="yr1992" onmouseover="hover(1992);" onclick="return false;">1992</a></td>
+<td><a href="#" id="yr1991" onmouseover="hover(1991);" onclick="return false;">1991</a></td>
+<td><a href="#" id="yr1990" onmouseover="hover(1990);" onclick="return false;">1990</a></td>
+<td><a href="#" id="yr1989" onmouseover="hover(1989);" onclick="return false;">1989</a></td>
+<td><a href="#" id="yr1988" onmouseover="hover(1988);" onclick="return false;">1988</a></td>
+<td><a href="#" id="yr1987" onmouseover="hover(1987);" onclick="return false;">1987</a></td>
+<td><a href="#" id="yr1986" onmouseover="hover(1986);" onclick="return false;">1986</a></td>
+<td><a href="#" id="yr1985" onmouseover="hover(1985);" onclick="return false;">1985</a></td>
+<td><a href="#" id="yr1984" onmouseover="hover(1984);" onclick="return false;">1984</a></td>
+<td><a href="#" id="yr1983" onmouseover="hover(1983);" onclick="return false;">1983</a></td>
+</tr></table>
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<html>
+<head>
+	<title>The Class Notes</title>
+	<!-- Welcome -->
+	<style type="text/css">
+		td {font-family:Arial; font-size:.7em;}
+		a:hover {color:#FFE566}
+		.big {font-size:1em;}
+	</style>
+	
+<script language="Javascript">
+<!--
+// Add messages here to have them animated
+		var msgArr = Array("<center>Cornell University&rsquo;s Original Coed A Cappella Group<br>&nbsp;<center>",
+			"<center><br><font color=#FFE566>Spring Concert</font>! Cuttin' Class XXI - Saturday, May 7th, 7PM Statler Auditorium.<br>&nbsp;</center>",	
+			"<center>Check out sound clips from the new CD<br><font color=#FFE566>Unfolded</font> in the Recordings section<br>&nbsp;</center>"),
+		ns4 = (document.layers)? true:false;
+		ie4 = (document.all)? true:false;
+		function setAttrib(objName,attribName,value,styleBool) {
+			if (ns4) {
+				attribName = (attribName=="left") ? "pageX" : attribName;
+				eval("document['"+objName+"']."+attribName+"=value");
+			} else if (ie4) {
+				eval("document.all['"+objName+"']" + (styleBool==1 ? ".style" : "") + "."+attribName+"='"+value+"'");
+			} else {		// Netscape 6
+				eval("document.getElementById('"+objName+"')" + (styleBool==1 ? ".style" : "") + "."+attribName+"=value");				
+			}
+		}	
+		var currMsg = 0;
+		var colorArr = Array("ffffff","cccccc","999999","666666","333333","000000","333333","666666","999999","cccccc","ffffff");
+		var currStep = 0;
+		function fadeMessages() {
+			setAttrib("importantmessage","innerHTML",msgArr[currMsg],0)
+			setAttrib("importantmessage","color",("#" + colorArr[currStep]),1)
+			if (currStep==0) {
+				delayTime = 4000;
+			} else {
+				delayTime = 40;
+				if (currStep==4) {
+					currMsg++; if (currMsg>=msgArr.length) currMsg=0;
+				}
+			}
+			currStep++;  if (currStep>10) currStep=0;
+			theID = setTimeout("fadeMessages()",delayTime);
+		}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+<body bgcolor=#000000 text=#ffffff link=#cce5ff alink=#ffffff vlink=#cce5ff marginheight=18 marginwidth=10 leftmargin=10 topmargin=18 bottommargin=18 rightmargin=10 bgproperties="fixed" style="background-image:url('img/rightBk.jpg'); background-repeat:no-repeat;" onload="fadeMessages(); parent.nav.clr(0);MM_preloadImages('img/Group.jpg')">
+<script language="Javascript">var ns4 = (document.layers)? true:false; if (ns4) { document.write("<style tyle='text/css'>.big {font-size:.8em}</style>"); }</script>
+<table border=0 cellpadding=0 cellspacing=0>
+<tr valign=top>
+    <td> <a href="members.html" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Group','','img/2005Group1.gif',1)"><img src="img/2005Group2.gif" alt="Members" name="Group" width="480" height="360" border="0" vspace="11"></a><br clear=all>
+      <img src="img/p.gif" width="1" height="9" border="0"><br>
+<b><i><a href="concerts.html" style="text-decoration:none; color:#ffffff;"><div id="importantmessage"><center>Cornell University's original<br>coed a cappella group<center>
+  <p></p>
+</div></a></i></b><br>
+<br><img src="img/la.gif" width="54" height="53" alt="La" border="0" hspace=141 vspace=20>
+<br><br>
+<br><center>visitor number:<br><img src="/cgi-sys/Count.cgi?df=theclassnotes.com-welcome.html&dd=C&ft=0"><br></center>
+</td>
+<td width=35><img src="img/p.gif" width="35" height="1" border="0"></td>
+    <td width=185> <p><b class=big><a href="news.html" style="text-decoration:none; color:#ffffff;">NEWS 
+        *</a></b><br>
+        <br>
+        <b class=big>04.18.05 // <a href="concerts.html">Cuttin' Class XXI</a></b><br>
+        Come celebrate the end of classes with the Class Notes at their annual 
+        Spring show Cuttin' Class XXI.<br>
+        <br>
+        <a href="picsandmedia/PostersAndFlyers/Cuttin%27-Class-XXI-Poster.gif" target="display"><img src="picsandmedia/PostersAndFlyers/Cuttin%27-Class-XXI-Poster-th.gif" border=1 width=100 height=135></a> 
+        <br>
+        <br>
+        <br>
+        <b class=big>02.06.05 // <a href="img/newbiesS2005.jpg" target="display">Newbies!!!</a></b><br>
+        Congratulations to the newest Class Notes!!!<br>
+        <strong><br>
+        Ellen Huang<br>
+        Gei-Tai Lin<br>
+        Amanda Soled<br>
+        Anderson Clark<br>
+        <br>
+        </strong><strong> </strong><br>
+        <b class=big>01.06.05 // <a href="picsmedia.html">Free Stuff!</a></b><br>
+        You can now download <a href="sounds/The%20Class%20Notes%20(Live)%20-%20Always%20Be%20My%20Baby.mp3">Always 
+        Be My Baby</a> from our Fall Concert as well as <a href="sounds/The%20Class%20Notes%20-%20Uninvited.mp3">Uninvited</a> 
+        from our latest CD at our <a href="picsmedia.html">Media</a> page! <br>
+        <br>
+        <br>
+        <b class=big>12.06.04 // <a href="concerts.html">Classified 2004</a></b><br>
+        A great thank you to all our fans who helped make Classified a success. 
+        Hopefully we'll have media clips of the concert available soon!<br>
+        <br>
+        <a href="picsandmedia/PostersAndFlyers/Classified_2004.jpg" target="display"><img src="picsandmedia/PostersAndFlyers/Classified_2004_thumb%20.jpg" border=1 width=115 height=77></a> 
+        <br>
+        <br>
+        <br>
+        <b class=big>10.07.04 // <a href="unfolded.html">Unfolded</a></b><br>
+        Our latest CD, Unfolded, has been reviewed!<br>
+        <br>
+        <a target="_top" href="http://www.rarb.org/reviews/473.html"><IMG border=0
+src="http://www.rarb.org/images/links/rarb.gif"></a><br>
+        <br>
+        Click to read the <a target="_top" href= "http://www.rarb.org/reviews/473.html">review</a>.<br>
+        <br>
+        <br>
+        <b class=big><a href="contactus.html" style="text-decoration:none; color:#ffffff;">HIRING 
+        *</a></b><br>
+        <br>
+        Need some high class<br>
+        entertainment? <a href="contactus.html">Contact us</a><br>
+        for your next event. 
+        <!-- <p><br><p><br><p>
+<img src="/cgi-sys/Count.cgi?df=theclassnotes.com-welcome.html&dd=C&ft=0" align="right"> -->
+      </p>
+      </td>
+  </tr>
+</table>
+</body>
+</html>
